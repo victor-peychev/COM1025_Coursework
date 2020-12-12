@@ -4,3 +4,51 @@
 <br/>
 <br/>
 <h6>*you are now cursed*</h6>
+<% rows = [1,2,3,4,5,6,7,8,9,10] %>
+<% seats = ["A","B","C","D","E","F"]%>
+<% items = [] %>
+<% for row in rows do %>
+<% for seat in seats do %>
+<% items.push((row.to_s + seat))%>
+<% end %>
+<% end %>
+
+<form action="/action_page.php" method="get">
+  <label for="seat">Choose your seat from the list:</label>
+  <input list="seats" name="seat" id="seat">
+  <datalist id="seats">
+    <option value="Edge">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+    <% for i in items do%>
+      <option value=<%= i %>>
+    <% end %>
+  </datalist>
+  <input type="submit">
+</form>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <button class="dropdown-item" type="button">Action</button>
+    <button class="dropdown-item" type="button">Another action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div>
+
+<div class="input-group">
+    <input type="TextBox" ID="datebox" Class="form-control"></input>
+    <div class="input-group-btn">
+        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+            <span class="caret"></span>
+        </button>
+        <ul id="demolist" class="dropdown-menu">
+            <% for i in items do%>
+              <li><a href="#"><%= i %></a></li>
+            <% end %>
+        </ul>
+    </div>
+</div>
