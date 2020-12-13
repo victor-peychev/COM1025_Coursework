@@ -17,9 +17,26 @@
       </li>
 
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <form class="form-inline">
+      <% if user_signed_in? %>
+
+        <li class="form-inline">
+          <%= link_to "Edit Profile", edit_user_registration_path, class:"btn btn-outline-success my-2 my-sm-0" %>
+        </li>
+
+        <li class="form-inline">
+        <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class:"btn btn-outline-success my-2 my-sm-0" %>
+        </li>
+
+      <% else %>
+        <li class="form-inline">
+          <%= link_to "Sign In", new_user_session_path, class:"btn btn-outline-success my-2 my-sm-0" %>
+        </li>
+        <li class="form-inline">
+          <%= link_to "Sign Up", new_user_registration_path, class:"btn btn-outline-success my-2 my-sm-0" %>
+        </li>
+
+      <% end %>
     </form>
   </div>
 </nav>
