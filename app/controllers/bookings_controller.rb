@@ -9,9 +9,6 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
   end
 
-  def flight
-    @arr = @flights
-  end
   # GET /bookings/1
   # GET /bookings/1.json
   def show

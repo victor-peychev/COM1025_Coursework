@@ -3,7 +3,7 @@
   <h1 class="display-4"><%= @booking.name %></h1>
   <p class="lead">Date Of Birth:  <%= @booking.date_of_birth %>  |   Phone Number: <%= @booking.phone_number %> <br/></p>
   <hr class="my-4">
-  <p> Seat:  <%= @booking.seat %>  |  Flight Number:<%= @booking.flight_number %></p>
+  <p> Flight Number:<%= @booking.flight_number %></p>
   <br/>
   <p class="lead">
     <%= link_to 'Edit', edit_booking_path(@booking), class: "btn btn-secondary" %>
@@ -11,5 +11,4 @@
     <p></p>
     <br/>
     <%= link_to 'Delete', @booking, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
-  </p>
 </div>

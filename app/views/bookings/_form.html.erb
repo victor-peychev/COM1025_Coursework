@@ -25,17 +25,11 @@
   </div>
 
   <div class="field form-group">
-    <%= form.label :seat %>
-    <%= form.number_field :seat, class:"form-control", placeholder: "Seat" %>
+    <%= form.number_field :seat, class:"form-control", placeholder: "Seat", value: 0, type: :hidden %>
   </div>
 
   <div class="field form-group">
-    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-        <option selected>Choose...</option>
-        <option value="1">VP3562</option>
-        <option value="2">VP3730</option>
-        <option value="3">VP2815</option>
-      </select>
+    <%= form.text_field :flight_number, class:"form-control", value: "VP3652", type: :hidden %>
   </div>
 
   <div class="field form-group">
