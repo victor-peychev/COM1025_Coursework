@@ -19,13 +19,24 @@
     </ul>
     <form class="form-inline">
       <% if user_signed_in? %>
-
+        <li class="form-inline">
+          <%= link_to "My Bookings ", bookings_path, class:"btn btn-success" %>
+        </li>
+        <li class="form-inline">
+            <div class="dividerx2"/>
+        </li>
         <li class="form-inline">
           <%= link_to "Edit Profile", edit_user_registration_path, class:"btn btn-outline-success my-2 my-sm-0" %>
         </li>
+        <li class="form-inline">
+            <div class="divider"/>
+        </li>
 
         <li class="form-inline">
-        <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class:"btn btn-outline-success my-2 my-sm-0" %>
+        <%= link_to "Sign out", destroy_user_session_path, method: :destroy, class:"btn btn-outline-success my-2 my-sm-0" %>
+        </li>
+        <li class="form-inline">
+            <div class="divider"/>
         </li>
 
       <% else %>
@@ -33,7 +44,13 @@
           <%= link_to "Sign In", new_user_session_path, class:"btn btn-outline-success my-2 my-sm-0" %>
         </li>
         <li class="form-inline">
+            <div class="divider"/>
+        </li>
+        <li class="form-inline">
           <%= link_to "Sign Up", new_user_registration_path, class:"btn btn-outline-success my-2 my-sm-0" %>
+        </li>
+        <li class="form-inline">
+            <div class="divider"/>
         </li>
 
       <% end %>

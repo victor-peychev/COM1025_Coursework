@@ -2,30 +2,33 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @ticket.name %>
+  <%= @booking.name %>
 </p>
 
 <p>
   <strong>Date of birth:</strong>
-  <%= @ticket.date_of_birth %>
+  <%= @booking.date_of_birth %>
 </p>
 
 <p>
   <strong>Phone number:</strong>
-  <%= @ticket.phone_number %>
+  <%= @booking.phone_number %>
 </p>
 
 <p>
   <strong>Seat:</strong>
-  <%= @ticket.seat %>
+  <%= @booking.seat %>
 </p>
 
 <p>
   <strong>Flight number:</strong>
-  <%= @ticket.flight_number %>
+  <%= @booking.flight_number %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @ticket.user_id %>
+  <%= @booking.user_id %>
 </p>
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>
