@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  flight_num: MyString
+  departing: MyString
+  arriving: MyString
+  date: 2020-12-14 05:00:12
+  seats: 1
+
+two:
+  flight_num: MyString
+  departing: MyString
+  arriving: MyString
+  date: 2020-12-14 05:00:12
+  seats: 1

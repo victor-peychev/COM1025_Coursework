@@ -1,0 +1,22 @@
+<%= image_tag("airplane.jpg", :alt => "something") %>
+<h1>Flights:</h1>
+<br/>
+<br/>
+<br/>
+
+<div class="container">
+  <div class="row">
+    <% @flights.each do |flight| %>
+    <div class="col-sm">
+      <p>Flight Number:  <%= flight.flight_num %></p>
+      <p>Departing From:  <%= flight.departing %></p>
+      <p>Arriving:  <%= flight.arriving %></p>
+      <p>Date And Time Of Departure:  <%= flight.date %></p>
+      <p>Available Seats :  <%= flight.seats %></p>
+      <br/>
+      <br/>
+      <%= link_to "Book Now", new_booking_path, class: "btn btn-primary" %>
+    </div>
+
+  <% end %>
+</div>

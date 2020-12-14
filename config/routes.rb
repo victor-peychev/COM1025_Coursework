@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :flights
   resources :bookings
   devise_for :users
   devise_scope :user do
@@ -6,7 +7,7 @@ Rails.application.routes.draw do
   end
   get 'home/contacts'
   get 'home/about'
-  root 'home#index'
-  root to: 'home#index'
+  root 'flights#index'
+  root to: 'flights#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
