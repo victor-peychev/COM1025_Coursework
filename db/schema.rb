@@ -16,17 +16,9 @@ ActiveRecord::Schema.define(version: 2020_12_14_052334) do
     t.string "name"
     t.date "date_of_birth"
     t.string "phone_number"
-    t.string "seat"
+    t.integer "seat"
     t.string "flight_number"
-    t.string "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "tickets", force: :cascade do |t|
-    t.string "passport_n"
-    t.string "flight_n"
-    t.string "seat"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

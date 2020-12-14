@@ -1,34 +1,15 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @booking.name %>
-</p>
-
-<p>
-  <strong>Date of birth:</strong>
-  <%= @booking.date_of_birth %>
-</p>
-
-<p>
-  <strong>Phone number:</strong>
-  <%= @booking.phone_number %>
-</p>
-
-<p>
-  <strong>Seat:</strong>
-  <%= @booking.seat %>
-</p>
-
-<p>
-  <strong>Flight number:</strong>
-  <%= @booking.flight_number %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @booking.user_id %>
-</p>
-
-<%= link_to 'Edit', edit_booking_path(@booking) %> |
-<%= link_to 'Back', bookings_path %>
+<div class="jumbotron">
+  <h1 class="display-4"><%= @booking.name %></h1>
+  <p class="lead">Date Of Birth:  <%= @booking.date_of_birth %>  |   Phone Number: <%= @booking.phone_number %> <br/></p>
+  <hr class="my-4">
+  <p> Seat:  <%= @booking.seat %>  |  Flight Number:<%= @booking.flight_number %></p>
+  <br/>
+  <p class="lead">
+    <%= link_to 'Edit', edit_booking_path(@booking), class: "btn btn-secondary" %>
+    <%= link_to 'Back', bookings_path, class: "btn btn-secondary" %>
+    <p></p>
+    <br/>
+    <%= link_to 'Delete', @booking, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+  </p>
+</div>
